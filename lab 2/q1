@@ -1,0 +1,30 @@
+class lights:
+  def __init__(self,roomn,st):
+    self.room_name=roomn
+    self.status=st
+
+  def onfunc(self):
+    status=True
+    print(f"light for room: {self.room_name} turned {'ON' if self.status==True else 'OFF'}")
+
+
+  def offfunc(self):
+    status=False
+    print(f"light for room: {self.room_name} turned {'OFF' if self.status==False else 'ON'}")
+
+  def getStatus(self):
+    print(f"Current Status is: {self.status}")
+
+
+
+
+
+
+livingroom= lights("Living Room","OFF")
+bedroom= lights("Bedroom","OFF")
+
+livingroom.onfunc()
+bedroom.offfunc()
+livingroom.getStatus()
+bedroom.getStatus()
+
